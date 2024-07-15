@@ -3,9 +3,6 @@
 -- Add any additional options hereby
 vim.g.mapleader = " "
 
-vim.opt.encoding = "utf-8"
-vim.opt.fileencoding = "utf-8"
-
 vim.opt.number = true
 
 vim.opt.title = true
