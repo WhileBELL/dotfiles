@@ -32,3 +32,9 @@ then use GNU stow to create symlinks
 ```
 stow .
 ```
+
+if it don't work use
+
+```
+stow --adopt .
+```
