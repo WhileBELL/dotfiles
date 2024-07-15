@@ -123,3 +123,4 @@ export NVM_DIR="$HOME/.nvm"
 
 alias n='nvim'
 alias cls='clear'
+alias pyrun='python3 -u '
