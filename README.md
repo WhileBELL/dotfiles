@@ -38,3 +38,12 @@ if it don't work use
 ```
 stow --adopt .
 ```
+
+after stow all the files
+
+```
+-- for source the bashrc files
+source .bashrc
+```
+
+and use `<C-s>r` for source tmux.conf
