@@ -121,10 +121,16 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
-export TERM=screen-256color
+# export TERM=screen-256color
+
+if [ -n "$TMUX" ]; then
+  export TERM=tmux-256color
+fi
 
 alias cd..='cd ..'
 alias cls='clear'
 alias n='nvim'
 alias lgit='lazygit'
+
+# code run shortcut
 alias pyrun='python3 -u '

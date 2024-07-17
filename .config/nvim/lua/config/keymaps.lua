@@ -14,6 +14,9 @@ map("n", "<C-u>", "<C-u>zz")
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
 
+-- paste with out copy the word that pasted
+map("x", "<leader>p", [["_dP]])
+
 -- Indentment/decrement
 map("n", "+", "<C-a>")
 map("n", "-", "<C-x>")
