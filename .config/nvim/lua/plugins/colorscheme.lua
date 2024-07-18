@@ -12,7 +12,7 @@ return {
 		config = function()
 			vim.g.nord_italic = true
 			vim.g.nord_bold = true
-			vim.g.nord_disable_background = false
+			vim.g.nord_disable_background = true
 			vim.g.nord_borders = false
 			vim.g.nord_cursorline_transparent = false
 			require("headlines").setup({
