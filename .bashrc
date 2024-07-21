@@ -127,10 +127,19 @@ if [ -n "$TMUX" ]; then
   export TERM=tmux-256color
 fi
 
+# make life ez shortcut
+alias q='exit'
 alias cd..='cd ..'
 alias cls='clear'
 alias n='nvim'
 alias lgit='lazygit'
+
+# Shortcut to my floder
+alias work='cd ~/Documents/'
+alias cd_nvim='cd ~/.config/nvim/'
+alias collage='cd ~/Documents/Collage/'
+alias learn='cd ~/Documents/Learn/'
+alias myproject='cd ~/Documents/MyProject/'
 
 # code run shortcut
 alias pyrun='python3 -u '
