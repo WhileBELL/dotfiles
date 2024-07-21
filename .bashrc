@@ -135,11 +135,11 @@ alias n='nvim'
 alias lgit='lazygit'
 
 # Shortcut to my floder
-alias work='cd ~/Documents/'
+alias work='cd ~/work/'
 alias cd_nvim='cd ~/.config/nvim/'
-alias collage='cd ~/Documents/Collage/'
-alias learn='cd ~/Documents/Learn/'
-alias myproject='cd ~/Documents/MyProject/'
+alias collage='cd ~/work/Collage/'
+alias learn='cd ~/work/Learn/'
+alias dotfiles='cd ~/dotfiles'
 
 # code run shortcut
 alias pyrun='python3 -u '

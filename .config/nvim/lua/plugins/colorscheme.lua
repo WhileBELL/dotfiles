@@ -2,7 +2,7 @@ return {
 	{
 		"LazyVim/LazyVim",
 		opts = {
-			colorscheme = "nord",
+			colorscheme = "kanagawa",
 		},
 	},
 	{
@@ -29,6 +29,18 @@ return {
 					dash_highlight = "Dash",
 					quote_highlight = "Quote",
 				},
+			})
+		end,
+	},
+	{
+		"rebelot/kanagawa.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("kanagawa").setup({
+				transparent = false,
+				undercurl = true,
+				terminalColors = true,
 			})
 		end,
 	},

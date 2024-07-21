@@ -1,13 +1,27 @@
 return {
-	-- Hihglight colors
 	{
 		"echasnovski/mini.hipatterns",
 		event = "BufReadPre",
-		opts = {},
+		opts = {
+			highlighters = {
+				hsl_color = {
+					pattern = "hsl%(%d+,? %d+%%?,? %d+%%?%)",
+					group = function(_, match)
+						local utils = require("solarized-osaka.hsl")
+						--- @type string, string, string
+						local nh, ns, nl = match:match("hsl%((%d+),? (%d+)%%?,? (%d+)%%?%)")
+						--- @type number?, number?, number?
+						local h, s, l = tonumber(nh), tonumber(ns), tonumber(nl)
+						--- @type string
+						local hex_color = utils.hslToHex(h, s, l)
+						return MiniHipatterns.compute_hex_color_group(hex_color, "bg")
+					end,
+				},
+			},
+		},
 	},
 	{
 		"telescope.nvim",
-		priority = 1000,
 		dependencies = {
 			{
 				"nvim-telescope/telescope-fzf-native.nvim",
@@ -17,6 +31,8 @@ return {
 		},
 		config = function(_, opts)
 			local telescope = require("telescope")
+			local actions = require("telescope.actions")
+			local fb_actions = require("telescope").extensions.file_browser.actions
 
 			opts.defaults = vim.tbl_deep_extend("force", opts.defaults, {
 				wrap_results = true,
