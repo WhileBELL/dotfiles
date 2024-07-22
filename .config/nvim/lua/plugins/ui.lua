@@ -53,7 +53,7 @@ return {
 			line.setup({
 				options = {
 					icons_enabled = true,
-					theme = "kanagawa",
+					theme = "auto",
 					component_separators = { right = "✧ .*" },
 					section_separators = { left = "", right = "" },
 				},
@@ -119,7 +119,7 @@ return {
 						" ",
 						{ filename, gui = modified and "bold,italic" or "bold" },
 						" ",
-						guibg = "#363944",
+						-- guibg = "#d8d8f6",
 					}
 					return buffer
 				end,

@@ -133,6 +133,9 @@ alias cd..='cd ..'
 alias cls='clear'
 alias n='nvim'
 alias lgit='lazygit'
+alias activate_myenv='source ~/myenv/bin/activate'
+alias inv='nvim $(fzf -m --preview="batcat --color=always {}")'
+alias bat='batcat'
 
 # Shortcut to my floder
 alias work='cd ~/work/'

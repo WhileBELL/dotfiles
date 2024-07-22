@@ -2,45 +2,40 @@ return {
 	{
 		"LazyVim/LazyVim",
 		opts = {
-			colorscheme = "kanagawa",
+			colorscheme = "nordfox",
 		},
 	},
 	{
-		"shaunsingh/nord.nvim",
+		"EdenEast/nightfox.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			vim.g.nord_italic = true
-			vim.g.nord_bold = true
-			vim.g.nord_disable_background = true
-			vim.g.nord_borders = false
-			vim.g.nord_cursorline_transparent = false
-			require("headlines").setup({
-				markdown = {
-					headline_highlights = {
-						"Headline1",
-						"Headline2",
-						"Headline3",
-						"Headline4",
-						"Headline5",
-						"Headline6",
-					},
-					codeblock_highlight = "CodeBlock",
-					dash_highlight = "Dash",
-					quote_highlight = "Quote",
+			local foxxy = require("nightfox")
+			foxxy.setup({
+				options = {
+					transparent = true,
+					terminal_colors = true,
+					keywords = "bold",
+					types = "italic,bold",
 				},
-			})
-		end,
-	},
-	{
-		"rebelot/kanagawa.nvim",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			require("kanagawa").setup({
-				transparent = false,
-				undercurl = true,
-				terminalColors = true,
+				modules = {
+
+					barbar = true,
+					"dap-ui",
+					"gitsigns",
+					"lazy.nvim",
+					"neotree",
+					"telescope",
+					"cmp",
+					"indent-blankline",
+					"treesitter",
+				},
+				palettes = {
+					dayfox = {
+						bg0 = "#d8d8f6",
+						bg1 = "#fde8ea",
+					},
+				},
 			})
 		end,
 	},

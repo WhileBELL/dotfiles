@@ -5,8 +5,8 @@
 local map = LazyVim.safe_keymap_set
 local opts = { noremap = true, silent = true }
 
-map("v", "K", ":m '<1<CR>gv=gv")
-map("v", "J", ":m '>+4<CR>gv=gv")
+map("v", "J", ":m '>+1<CR>gv=gv")
+map("v", "K", ":m '<-2<CR>gv=gv")
 
 map("n", "J", "mzJ`z")
 map("n", "<C-d>", "<C-d>zz")
