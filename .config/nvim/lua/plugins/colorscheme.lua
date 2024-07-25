@@ -13,7 +13,7 @@ return {
 			local foxxy = require("nightfox")
 			foxxy.setup({
 				options = {
-					transparent = true,
+					transparent = false,
 					terminal_colors = true,
 					keywords = "bold",
 					types = "italic,bold",
@@ -29,12 +29,6 @@ return {
 					"cmp",
 					"indent-blankline",
 					"treesitter",
-				},
-				palettes = {
-					dayfox = {
-						bg0 = "#d8d8f6",
-						bg1 = "#fde8ea",
-					},
 				},
 			})
 		end,

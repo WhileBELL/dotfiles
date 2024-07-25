@@ -1,4 +1,16 @@
 return {
+	-- show all file in neo-tree
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		opts = {
+			filesystem = {
+				filtered_items = {
+					visible = true,
+				},
+			},
+		},
+	},
+
 	{
 		"echasnovski/mini.hipatterns",
 		event = "BufReadPre",
@@ -31,8 +43,6 @@ return {
 		},
 		config = function(_, opts)
 			local telescope = require("telescope")
-			local actions = require("telescope.actions")
-			local fb_actions = require("telescope").extensions.file_browser.actions
 
 			opts.defaults = vim.tbl_deep_extend("force", opts.defaults, {
 				wrap_results = true,
