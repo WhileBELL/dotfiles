@@ -6,14 +6,18 @@ italic_font      auto
 bold_italic_font auto
 font_size 12.0
 
-window_margin_width 10.0
-single_window_margin_width 0
+remember_window_size no
+initial_window_width  120c
+initial_window_height 35c
 
-background_opacity 0.5
+window_margin_width 0.0
+single_window_margin_width 0.0
+
+background_opacity 1.0
 
 map f1 new_window_with_cwd
 
 # BEGIN_KITTY_THEME
-# Solarized Light
+# Nord
 include current-theme.conf
 # END_KITTY_THEME
